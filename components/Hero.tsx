@@ -1,5 +1,5 @@
+
 import Link from "next/link";
-import { GOOGLE_FORM_URL } from "@/lib/site";
 
 export default function Hero() {
   return (
@@ -14,47 +14,67 @@ export default function Hero() {
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center pt-20">
         <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-slate-900 mb-6 animate-fade-in-up delay-100">
-          Structured Remote Internship Programs
-          <span className="block gradient-text">Engineered for Career-Ready Skills</span>
+          Technology Skill Development & Virtual Internship Programs
         </h1>
 
-        <p className="text-lg sm:text-xl text-gray-600 mb-10 max-w-3xl mx-auto animate-fade-in-up delay-200">
-          A high-accountability internship experience focused on practical execution, measurable
-          progress, and professional outcomes across high-demand domains.
+        <p className="text-lg sm:text-xl text-gray-600 mb-6 max-w-3xl mx-auto animate-fade-in-up delay-200">
+          SkyTech Digital Labs provides structured virtual internship and skill development programs designed to help students gain practical exposure to modern technologies such as Data Science, Artificial Intelligence, and Web Development.
         </p>
 
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in-up delay-300">
-          <a
-            href={GOOGLE_FORM_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn-primary text-lg px-8 py-4 animate-pulse-glow"
+        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in-up delay-300 mb-8">
+          <Link
+            href="/internships"
+            className="btn-primary text-lg px-8 py-4"
           >
-            Apply for Internship
-          </a>
-          <Link href="/internships" className="btn-secondary text-lg px-8 py-4">
-            View Program Details
+            Explore Programs
+          </Link>
+          <Link href="/how-it-works" className="btn-secondary text-lg px-8 py-4">
+            How It Works
           </Link>
         </div>
 
-        <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 animate-fade-in-up delay-400">
-          <div className="text-center">
-            <div className="text-3xl font-bold text-blue-600">8+</div>
-            <div className="text-sm text-gray-600">Internship Domains</div>
+        {/* Registration Fee Badge */}
+        <div className="inline-block bg-blue-100 border border-blue-300 rounded-lg px-6 py-3 mb-8 animate-fade-in-up delay-300">
+          <p className="text-blue-800 font-semibold">
+            Registration Fee: <span className="text-blue-900">Rs 109</span>
+          </p>
+          <p className="text-blue-600 text-xs mt-1">
+            *For documentation, onboarding & certification processing
+          </p>
+        </div>
+
+        {/* Trust Indicators */}
+        <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 animate-fade-in-up delay-400">
+          <div className="flex items-center justify-center gap-2 text-gray-700">
+            <svg className="w-5 h-5 text-green-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+            </svg>
+            <span className="text-sm font-medium">30-Day Structured Program</span>
           </div>
-          <div className="text-center">
-            <div className="text-3xl font-bold text-blue-600">30 Days</div>
-            <div className="text-sm text-gray-600">Program Duration</div>
+          <div className="flex items-center justify-center gap-2 text-gray-700">
+            <svg className="w-5 h-5 text-green-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+            </svg>
+            <span className="text-sm font-medium">Practical Project Experience</span>
           </div>
-          <div className="text-center">
-            <div className="text-3xl font-bold text-blue-600">Rs 10K-20K</div>
-            <div className="text-sm text-gray-600">Stipend Opportunity</div>
+          <div className="flex items-center justify-center gap-2 text-gray-700">
+            <svg className="w-5 h-5 text-green-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+            </svg>
+            <span className="text-sm font-medium">Verified Internship Certificate</span>
           </div>
-          <div className="text-center">
-            <div className="text-3xl font-bold text-blue-600">Certificate</div>
-            <div className="text-sm text-gray-600">On Completion</div>
+          <div className="flex items-center justify-center gap-2 text-gray-700">
+            <svg className="w-5 h-5 text-green-600 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+            </svg>
+            <span className="text-sm font-medium">Performance-Based Stipend</span>
           </div>
         </div>
+
+        {/* Compliance Text */}
+        <p className="mt-8 text-sm text-gray-500 animate-fade-in-up delay-500">
+          Educational skill development initiative designed for learning and project exposure.
+        </p>
       </div>
 
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
@@ -65,3 +85,4 @@ export default function Hero() {
     </section>
   );
 }
+

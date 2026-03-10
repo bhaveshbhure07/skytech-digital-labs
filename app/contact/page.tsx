@@ -4,7 +4,7 @@ import { CONTACT_EMAIL, SITE_NAME } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: `Contact Us | ${SITE_NAME}`,
-  description: "Get in touch with SkyTech Digital Labs for internship-related queries and support.",
+  description: "Get in touch with SkyTech Digital Labs for skill development program-related queries and support.",
 };
 
 export default function ContactPage() {
@@ -32,7 +32,10 @@ export default function ContactPage() {
                 </div>
                 <div>
                   <h3 className="font-semibold text-slate-900 mb-2">Location</h3>
-                  <p className="text-gray-600">Tumsar, Maharashtra, India</p>
+                  <p className="text-gray-600">
+                    Tumsar, Bhandara District<br />
+                    Maharashtra, India
+                  </p>
                 </div>
                 <div>
                   <h3 className="font-semibold text-slate-900 mb-2">Response Time</h3>
@@ -50,3 +53,4 @@ export default function ContactPage() {
     </div>
   );
 }
+

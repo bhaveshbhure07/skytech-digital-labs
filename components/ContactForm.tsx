@@ -6,12 +6,13 @@ import { CONTACT_EMAIL } from "@/lib/site";
 export default function ContactForm() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
   const [message, setMessage] = useState("");
 
   const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const subject = encodeURIComponent(`Inquiry from ${name}`);
-    const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`);
+    const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\nPhone: ${phone}\n\nMessage:\n${message}`);
     window.location.href = `mailto:${CONTACT_EMAIL}?subject=${subject}&body=${body}`;
   };
 
@@ -48,6 +49,20 @@ export default function ContactForm() {
         />
       </div>
       <div>
+        <label htmlFor="phone" className="form-label">
+          Phone
+        </label>
+        <input
+          type="tel"
+          id="phone"
+          name="phone"
+          className="form-input"
+          placeholder="Your phone number"
+          value={phone}
+          onChange={(e) => setPhone(e.target.value)}
+        />
+      </div>
+      <div>
         <label htmlFor="message" className="form-label">
           Message
         </label>
@@ -68,3 +83,4 @@ export default function ContactForm() {
     </form>
   );
 }
+

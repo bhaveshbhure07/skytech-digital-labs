@@ -3,34 +3,34 @@ import { GOOGLE_FORM_URL, SITE_NAME } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: `How It Works | ${SITE_NAME}`,
-  description: "Understand the internship journey from application to certification.",
+  description: "Understand the skill development and internship program journey from application to certification.",
 };
 
 const steps = [
   {
     step: 1,
-    title: "Submit Application",
-    description: "Complete the official form and choose your preferred internship domain.",
+    title: "Apply for the Program",
+    description: "Complete the official form and choose your preferred skill development area.",
   },
   {
     step: 2,
-    title: "Application Review",
-    description: "Your profile is reviewed for domain fit, commitment level, and readiness.",
+    title: "Get Program Access",
+    description: "Receive onboarding materials and access to learning resources.",
   },
   {
     step: 3,
-    title: "Shortlisting and Interview",
-    description: "Shortlisted candidates move to interview and selection screening.",
+    title: "Work on Assigned Projects",
+    description: "Complete practical projects under guided supervision and mentorship.",
   },
   {
     step: 4,
-    title: "Program Onboarding",
-    description: "Selected participants receive onboarding details and task workflow instructions.",
+    title: "Complete Evaluation",
+    description: "Undergo structured assessment based on project quality and consistency.",
   },
   {
     step: 5,
-    title: "Execution and Certification",
-    description: "Complete assignments, pass evaluation, and receive program completion credentials.",
+    title: "Receive Certificate",
+    description: "Get your verified internship certificate and performance report.",
   },
 ];
 
@@ -41,7 +41,7 @@ export default function HowItWorksPage() {
         <div className="max-w-7xl mx-auto px-4 text-center">
           <p className="uppercase tracking-[0.16em] text-blue-100 text-xs font-semibold mb-4">Process</p>
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">How It Works</h1>
-          <p className="text-blue-100 text-lg">A transparent internship journey from start to finish.</p>
+          <p className="text-blue-100 text-lg">A transparent skill development journey from start to finish.</p>
         </div>
       </section>
 
@@ -69,7 +69,7 @@ export default function HowItWorksPage() {
         <div className="container-custom max-w-4xl text-center">
           <h2 className="text-3xl font-bold text-white mb-4">Ready to Start?</h2>
           <p className="text-slate-300 mb-8">
-            Submit your application and begin a structured path to practical, job-relevant experience.
+            Submit your application and begin a structured path to practical, job-relevant skill development.
           </p>
           <a href={GOOGLE_FORM_URL} target="_blank" rel="noopener noreferrer" className="btn-primary">
             Apply Now
@@ -79,3 +79,4 @@ export default function HowItWorksPage() {
     </div>
   );
 }
+
