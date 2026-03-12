@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "../components/Navbar";
+import CredibilityBadge from "../components/CredibilityBadge";
 import Footer from "../components/Footer";
 import dynamic from "next/dynamic";
 import { SITE_NAME } from "@/lib/site";
@@ -32,6 +33,7 @@ export default function RootLayout({
         <main className="flex-grow">
           {children}
         </main>
+        <CredibilityBadge />
         <Footer />
         <FloatingSocials />
       </body>
